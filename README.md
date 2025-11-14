@@ -1,11 +1,11 @@
-# 🧠 Software de Automação de Leads
+#  Software de Automação de Leads
 
-## 🎯 Propósito do Projeto
+##  Propósito do Projeto
 O objetivo principal do software é **automatizar a busca e gestão de leads de CRM**, permitindo que pequenas empresas e autônomos encontrem **clientes e fornecedores de forma rápida e inteligente**, sem a necessidade de sistemas complexos ou processos manuais.
 
 ---
 
-## 👥 Público-Alvo
+##  Público-Alvo
 - **MEIs (Microempreendedores Individuais)**
 - **EPPs (Empresas de Pequeno Porte)**
 - **Autônomos e prestadores de serviço**
@@ -14,7 +14,7 @@ O foco está em profissionais e empresas que desejam **otimizar o tempo de prosp
 
 ---
 
-## 🚨 Problemas Que o Software Resolve
+##  Problemas Que o Software Resolve
 1. **Economia de tempo** – elimina a necessidade de buscar leads manualmente.  
 2. **Redução de custos** – dispensa o uso de sistemas complexos e caros de CRM.  
 3. **Eficiência operacional** – automatiza a coleta e organização dos leads.  
@@ -26,14 +26,14 @@ O foco está em profissionais e empresas que desejam **otimizar o tempo de prosp
 ## ⚙️ Escopo Inicial do Projeto
 | Etapa | Descrição | Status |
 |-------|------------|--------|
-| 1️⃣ Definir objetivo do software | Documentar propósito e público-alvo | ✅ Concluído |
-| 2️⃣ Mapear funcionalidades principais | Listar funções e recursos do sistema | 🔜 Em andamento |
-| 3️⃣ Criar fluxograma de navegação | Visualizar o fluxo de interação do usuário | ⏳ Pendente |
-| 4️⃣ Modelar banco de dados MySQL | Estruturar tabelas e relacionamentos | ⏳ Pendente |
+| 1️⃣ Definir objetivo do software | Documentar propósito e público-alvo |  Concluído |
+| 2️⃣ Mapear funcionalidades principais | Listar funções e recursos do sistema | Concluído |
+| 3️⃣ Criar fluxograma de navegação | Visualizar o fluxo de interação do usuário |  Pendente |
+| 4️⃣ Modelar banco de dados MySQL | Estruturar tabelas e relacionamentos |  Pendente |
 
 ---
 
-## 🧩 Estrutura do Projeto
+##  Estrutura do Projeto
 automacao-de-leads/
 │
 ├── docs/ # Documentações, ideias e anotações (Obsidian, fluxogramas etc.)
@@ -47,7 +47,7 @@ Copiar código
 
 ---
 
-## 🧱 Tecnologias Previstas
+##  Tecnologias Previstas
 | Categoria | Tecnologia |
 |------------|-------------|
 | Banco de Dados | MySQL |
@@ -59,7 +59,7 @@ Copiar código
 
 ---
 
-## 📅 Cronograma Inicial
+##  Cronograma Inicial
 | Fase | Tarefa | Prazo Estimado | Responsável |
 |------|--------|----------------|--------------|
 | Planejamento | Definir objetivo e público-alvo | ✅ 12/11/2025 | Cleyton Cardoso |
@@ -69,14 +69,14 @@ Copiar código
 
 ---
 
-## 📖 Histórico de Versões
+## Histórico de Versões
 | Versão | Data | Descrição |
 |---------|------|-----------|
 | 0.1 | 12/11/2025 | Criação do propósito e definição do público-alvo (PBI 1) |
 
 ---
 
-## 🧩 Próximos Passos
+##  Próximos Passos
 - [ ] Finalizar o **mapeamento de funcionalidades principais**
 - [ ] Criar **fluxograma de navegação do usuário**
 - [ ] Iniciar a **modelagem do banco de dados MySQL**
@@ -84,9 +84,151 @@ Copiar código
 
 ---
 
-## ✍️ Autor
+##  Autor
 **Cleyton Cardoso**  
 Desenvolvedor independente e idealizador do projeto de Automação de Leads.  
 > "Automatizar é dar tempo para o que realmente importa."
 
+
+
 ---
+
+
+
+ Feature 2 — Mapear Funcionalidades Principais
+ Objetivo da Feature
+
+Identificar, organizar e priorizar todas as funcionalidades que o software precisa ter para cumprir seu propósito: automatizar a busca, coleta, armazenamento e organização de leads via API, banco de dados e planilhas.
+
+ Funcionalidades Obrigatórias (Core do Sistema)
+1. Buscar informações via API Google
+
+Coletar: telefone, e-mail, endereço, site e dados complementares.
+
+Impacto: Alto
+
+Complexidade: Alta
+
+2. Coletar e salvar no Banco de Dados
+
+Armazenar dados brutos recebidos da API.
+
+Impacto: Alto
+
+Complexidade: Média
+
+3. Organizar dados coletados
+
+Ajustar estrutura, corrigir formatação e preparar para exportação.
+
+Impacto: Alto
+
+Complexidade: Média
+
+4. Editar informações
+
+Permitir ao usuário alterar telefones, e-mails e outros campos.
+
+Impacto: Alto
+
+Complexidade: Baixa
+
+5. Exportar dados para Google Sheets ou Excel
+
+Gerar tabela visível e organizada.
+
+Impacto: Alto
+
+Complexidade: Baixa
+
+ Funcionalidades Importantes (P1)
+6. Entrar em contato via WhatsApp
+
+Abrir link direto com número coletado.
+
+Impacto: Médio
+
+Complexidade: Baixa
+
+7. Agenda otimizada
+
+Transformar leads em cards de agenda (Excel, Sheets, Outlook).
+
+Impacto: Médio
+
+Complexidade: Média
+
+8. Marcar contato com ou sem sucesso
+
+Controle de tentativas de contato + retorno.
+
+Impacto: Médio
+
+Complexidade: Baixa
+
+ Funcionalidades Opcionais (P2)
+9. Atalho para PABX
+
+Enviar o número direto para o sistema de telefonia.
+
+Impacto: Baixo
+
+Complexidade: Alta
+
+10. Integração de calendário avançada
+
+Sincronização completa com Google Calendar / Outlook.
+
+Impacto: Baixo
+
+Complexidade: Média
+
+ Mapa de Dependência da Feature 2
+Nível 1 — API / Entrada de Dados
+
+Buscar informações via API (P0)
+
+Nível 2 — Armazenamento
+
+CRUD no Banco de Dados (Create, Read, Update, Delete)
+→ CRUD = operações fundamentais para manipular dados.
+
+Nível 3 — Organização e Disponibilização
+
+Organizar dados
+
+Editar informações
+
+Exportar para Excel/Sheets
+
+Nível 4 — Comunicação / Funcionalidades Extras
+
+WhatsApp
+
+Agenda
+
+Contato com sucesso/sem sucesso
+
+PABX
+
+Integração de calendário
+
+Resumo técnico do fluxo:
+API → Banco de Dados → Organização → Planilha → Comunicação/Agenda
+
+ Conclusão da Feature 2
+
+Toda a modelagem conceitual da funcionalidade foi definida:
+
+Funções obrigatórias e opcionais mapeadas
+
+Priorização por impacto e complexidade
+
+Mapa de dependência técnico pronto
+
+Base pronta para planejamento da próxima etapa (Feature 3)
+
+Versionamento
+Versão atual do projeto: v0.2.0
+Descrição da versão: Finalização da Feature 2 (funcionalidades, prioridades e mapa de dependência)
+Data: 2025-11-15

@@ -232,3 +232,77 @@ Versionamento
 Versão atual do projeto: v0.2.0
 Descrição da versão: Finalização da Feature 2 (funcionalidades, prioridades e mapa de dependência)
 Data: 2025-11-15
+
+_______________________________________________________________________
+
+1. Ambiente de Desenvolvimento Preparado
+
+Hoje foram instaladas, configuradas e testadas todas as ferramentas necessárias para o backend:
+
+✔ Node.js
+
+Instalado com sucesso
+
+Testado com:
+
+node -v → funcional
+
+npm -v → funcional após liberar execução de scripts no PowerShell
+
+✔ Python 3.12
+
+Instalado corretamente (versão 3.14 removida)
+
+Testado com:
+
+python --version
+
+Execução de script simples
+
+pip --version
+
+Instalação funcional de pacotes (pip install requests)
+
+Tudo funcionando de forma estável.
+
+✔ Git
+
+Git instalado e testado
+
+git --version, git init e git status funcionando
+
+Repositório local criado
+
+2. GitHub e VS Code
+
+Projeto configurado no VS Code
+
+README.md começado
+
+Ambiente preparado para sincronizar com GitHub via push
+
+3. Azure DevOps – Organização e Planejamento
+
+
+4. Novas PBIs Criadas Hoje no Backlog
+
+Todas registradas e organizadas corretamente no Kanban do Azure DevOps.
+
+5. Backend – Preparação Final Antes da Codificação (Feature 3 → 4 → 5)
+
+Com o ambiente 100% funcional (Python, Node, NPM, Git), agora o projeto está pronto para:
+
+Diagramar o fluxo de navegação (Feature 3)
+
+Criar o Modelo ER (Feature 4)
+
+Iniciar codificação do backend (Features 5 a 9)
+
+6. Status Geral do Projeto
+
+✔ Ambiente configurado
+✔ Ferramentas funcionando
+✔ Git ok
+✔ Azure DevOps organizado
+✔ Backlog estruturado profissionalmente
+✔ Pronto para iniciar codificação real do backend

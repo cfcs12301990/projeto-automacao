@@ -23,13 +23,13 @@ O foco está em profissionais e empresas que desejam **otimizar o tempo de prosp
 
 ---
 
-## ⚙️ Escopo Inicial do Projeto
+## Escopo Inicial do Projeto
 | Etapa | Descrição | Status |
 |-------|------------|--------|
-| 1️⃣ Definir objetivo do software | Documentar propósito e público-alvo |  Concluído |
-| 2️⃣ Mapear funcionalidades principais | Listar funções e recursos do sistema | Concluído |
-| 3️⃣ Criar fluxograma de navegação | Visualizar o fluxo de interação do usuário |  Pendente |
-| 4️⃣ Modelar banco de dados MySQL | Estruturar tabelas e relacionamentos |  Pendente |
+| 1 Definir objetivo do software | Documentar propósito e público-alvo |  Concluído |
+| 2 Mapear funcionalidades principais | Listar funções e recursos do sistema | Concluído |
+| 3 Criar fluxograma de navegação | Visualizar o fluxo de interação do usuário |  Pendente |
+| 4 Modelar banco de dados MySQL | Estruturar tabelas e relacionamentos |  Pendente |
 
 ---
 
@@ -62,7 +62,7 @@ Copiar código
 ##  Cronograma Inicial
 | Fase | Tarefa | Prazo Estimado | Responsável |
 |------|--------|----------------|--------------|
-| Planejamento | Definir objetivo e público-alvo | ✅ 12/11/2025 | Cleyton Cardoso |
+| Planejamento | Definir objetivo e público-alvo | X 12/11/2025 | Cleyton Cardoso |
 | Planejamento | Mapear funcionalidades principais | 14/11/2025 | Cleyton Cardoso |
 | Planejamento | Criar fluxograma de navegação | 16/11/2025 | Cleyton Cardoso |
 | Planejamento | Modelar banco de dados MySQL | 20/11/2025 | Cleyton Cardoso |

@@ -306,3 +306,70 @@ Iniciar codificação do backend (Features 5 a 9)
 ✔ Azure DevOps organizado
 ✔ Backlog estruturado profissionalmente
 ✔ Pronto para iniciar codificação real do backend
+
+____________________________________________________________________________
+
+Resumo do Progresso – 18/11/2025
+
+Hoje foram concluídas todas as tasks da Feature 3 – Navegação do Usuário, responsável por criar o fluxograma principal do software e definir visualmente o fluxo de uso do sistema.
+
+1. Criação do Fluxograma (Draw.io)
+
+A estrutura inicial do fluxograma foi definida com base no documento feature3-navegacao.md.
+
+Criado um novo diagrama no Draw.io com layout do zero.
+
+Exportado o código XML gerado e importado no diagrama corretamente.
+
+2. Construção Visual do Fluxo
+
+Foram definidos e inseridos os elementos visuais correspondentes a cada etapa do sistema:
+
+Início do Usuário
+
+Tela Inicial
+
+Buscar Leads
+
+Inserir Palavra-Chave
+
+API retorna dados
+
+Salvar no Banco de Dados
+
+Base de Dados
+
+Configurações
+
+Fim (dados salvos)
+
+Todos os elementos foram padronizados com formas e cores apropriadas (elipses para início/fim, retângulos para ações do usuário, processos para operações internas).
+
+3. Exportação e Salvamento
+
+O fluxograma foi exportado em .drawio e .png.
+
+Os arquivos foram organizados dentro da pasta:
+/fluxograma
+
+Ambos foram adicionados ao Git e enviados ao GitHub via bash com sucesso.
+
+4. Revisão de Consistência
+
+Foi realizada uma revisão completa para garantir que o fluxograma:
+
+Representa corretamente as funcionalidades da Feature 2
+
+Não possui etapas fora do escopo atual
+
+Segue a ordem técnica correta
+
+Está claro e compreensível para o usuário final
+
+Pode servir como base direta para a Feature 4 (modelagem do banco)
+
+Resultado: Fluxograma aprovado e finalizado.
+
+Status Final do Dia:
+Feature 3 concluída com sucesso.
+A partir de amanhã será iniciada a Feature 4 – Modelagem do Banco de Dados (MySQL ERD).

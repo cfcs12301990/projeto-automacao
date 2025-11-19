@@ -373,3 +373,79 @@ Resultado: Fluxograma aprovado e finalizado.
 Status Final do Dia:
 Feature 3 concluída com sucesso.
 A partir de amanhã será iniciada a Feature 4 – Modelagem do Banco de Dados (MySQL ERD).
+
+____________________________________________________________________________________
+18-11-2025
+Resumo Geral dos Estudos – SOLID (Módulos 1 ao 6)
+
+Hoje percorri todos os módulos do curso de SOLID, revisando conceitos fundamentais de arquitetura de software e aplicando cada princípio em exercícios práticos focados no meu projeto de Automação de Leads.
+
+ Módulo 1 – SRP (Single Responsibility Principle)
+
+Entendi que cada classe deve possuir uma única responsabilidade e um único motivo para mudar.
+
+Analisei impactos positivos: manutenção simples, menor acoplamento e maior clareza.
+
+Fiz exercícios sobre identificar múltiplas responsabilidades em classes e dividir de forma correta.
+
+Compreendi como sistemas monolíticos sofrem quando ignoram SRP.
+
+ Módulo 2 – OCP (Open/Closed Principle)
+
+Estudei como criar classes abertas para extensão e fechadas para modificação.
+
+Aprendi a usar polimorfismo e abstrações para adicionar funcionalidades sem alterar código existente.
+
+Fiz exercícios sobre implementação de cálculo distinto de taxas/valores usando classes estendidas.
+
+Compreendi que OCP evita regressões e torna o software escalável.
+
+ Módulo 3 – LSP (Liskov Substitution Principle)
+
+Aprendi que subclasses devem poder substituir suas classes base sem alterar o comportamento esperado.
+
+Analisei exemplos clássicos (Quadrado x Retângulo) e como isso quebra LSP.
+
+Resolvi exercícios comparando comportamentos de subclasses e detectando inconsistências.
+
+Consegui visualizar como violações de LSP geram bugs que só aparecem em cenários específicos.
+
+ Módulo 4 – ISP (Interface Segregation Principle)
+
+Estudei a importância de criar interfaces pequenas, específicas e sem métodos desnecessários.
+
+Aprendi que classes não devem ser forçadas a implementar métodos que não usam.
+
+Fiz testes e perguntas para identificar interfaces gordas e como quebrá-las.
+
+Analisei exemplos reais envolvendo serviços grandes e mal segmentados.
+
+ Módulo 5 – DIP (Dependency Inversion Principle)
+
+Compreendi que módulos de alto nível devem depender de abstrações, não de implementações concretas.
+
+Aprendi a diferença entre inversão de dependência e injeção de dependência.
+
+Resolvi exercícios mostrando como desacoplar classes e facilitar testes.
+
+Explorei como DIP reduz impactos quando um módulo muda.
+
+ Módulo 6 – Revisão Geral e Exercícios Avançados
+
+Passei por uma bateria de perguntas para consolidar os 5 princípios.
+
+Analisei um exercício prático envolvendo serviços de banco de dados, envio de relatórios e abstrações.
+
+Identifiquei pontos onde há acoplamento excessivo e como reestruturar usando SOLID.
+
+Reforcei entendimentos com exemplos em Python para aplicar no meu projeto real.
+
+ Resumo Final
+
+Estudei profundamente os princípios SOLID com foco na prática.
+
+Corrigi respostas, entendi conceitos que estavam confusos e consolidai com exemplos reais.
+
+Deixei preparado o terreno para revisar todo o curso amanhã, fixando definitivamente os cinco pilares da arquitetura limpa.
+
+Todo esse aprendizado será aplicado diretamente no desenvolvimento da Automação de Leads, tornando o código mais robusto, escalável e profissional.

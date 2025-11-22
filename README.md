@@ -449,3 +449,29 @@ Corrigi respostas, entendi conceitos que estavam confusos e consolidai com exemp
 Deixei preparado o terreno para revisar todo o curso amanhã, fixando definitivamente os cinco pilares da arquitetura limpa.
 
 Todo esse aprendizado será aplicado diretamente no desenvolvimento da Automação de Leads, tornando o código mais robusto, escalável e profissional.
+_____________________________________________________________________________
+
+Segundo Curso de SOLID – Revisão e Fixação dos Princípios Fundamentais
+
+Este segundo curso de SOLID teve como objetivo reforçar e aprofundar o entendimento dos cinco princípios fundamentais da programação orientada a objetos, garantindo um código mais limpo, modular, flexível e preparado para mudanças. Cada módulo foi estudado individualmente, com explicações teóricas, exemplos práticos em Python e exercícios aplicados para validar o aprendizado antes de avançar.
+
+Os princípios revisados foram:
+
+S — Single Responsibility Principle (SRP)
+Cada classe deve ter apenas uma responsabilidade, evitando acoplamento excessivo e facilitando manutenção.
+
+O — Open/Closed Principle (OCP)
+Classes devem estar abertas para extensão, mas fechadas para modificação, permitindo evoluir o software sem alterar código já testado.
+
+L — Liskov Substitution Principle (LSP)
+Subclasses devem ser totalmente substituíveis por suas classes pai, mantendo comportamento consistente.
+
+I — Interface Segregation Principle (ISP)
+Interfaces devem ser específicas, evitando forçar classes a implementar métodos que não utilizam.
+
+D — Dependency Inversion Principle (DIP)
+Módulos de alto nível não devem depender de módulos de baixo nível, mas sim de abstrações — favorecendo baixo acoplamento.
+
+Além dos princípios, o curso também revisou relacionamentos essenciais da POO (Associação, Agregação e Composição) e diversos exemplos reais para consolidar o uso correto de cada conceito.
+
+Este estudo aprofundado faz parte da preparação para criar um software de automação mais robusto, escalável e profissional, aplicando boas práticas de desenvolvimento em cada etapa do projeto.

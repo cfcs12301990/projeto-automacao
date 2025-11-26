@@ -475,3 +475,66 @@ Módulos de alto nível não devem depender de módulos de baixo nível, mas sim
 Além dos princípios, o curso também revisou relacionamentos essenciais da POO (Associação, Agregação e Composição) e diversos exemplos reais para consolidar o uso correto de cada conceito.
 
 Este estudo aprofundado faz parte da preparação para criar um software de automação mais robusto, escalável e profissional, aplicando boas práticas de desenvolvimento em cada etapa do projeto.
+
+______________________________________________________________________________________________________________________________
+
+26-11
+Hoje avançamos significativamente na Feature 4 – Criação do Modelo ER (Entidade-Relacionamento) do sistema de Automação de Leads. Foi realizado:
+
+1. Abertura e preparação do MySQL Workbench
+
+Instalação e abertura do MySQL Workbench.
+
+Criação de um novo EER Diagram para modelagem do banco.
+
+2. Criação das tabelas principais do sistema
+
+Foram criadas 10 tabelas profissionais, seguindo boas práticas de desenvolvimento:
+
+usuarios
+
+clientes
+
+buscas
+
+leads
+
+logs_leads
+
+tags
+
+leads_tags
+
+configuracao
+
+api_chaves
+
+sessoes_login
+
+Cada tabela foi criada com:
+
+Tipos de dados adequados
+
+Chaves primárias
+
+Chaves estrangeiras
+
+Defaults inteligentes
+
+Campos de auditoria (criado_em, atualizado_em)
+
+Regras de integridade
+
+3. Normalização e relacionamento entre entidades
+
+Todas as relações foram adicionadas:
+
+1:N entre usuários → leads
+
+1:N entre usuários → buscas
+
+N:N entre leads ↔ tags
+
+1:N entre usuários → sessões
+
+etc.

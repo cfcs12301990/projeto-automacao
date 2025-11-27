@@ -538,3 +538,11 @@ N:N entre leads ↔ tags
 1:N entre usuários → sessões
 
 etc.
+
+____________________________________________________________________________________________________________________
+
+27-11
+
+Começando a criar as FK pelo MySQL Workbench.
+Aprendendo como ligá-las e configurá-las atravé das abas Relationship e Forein Key.
+PRetendo terminar essa task do scrum amanhã sem falta, pois, tem bastante FK para fazer.

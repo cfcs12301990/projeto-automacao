@@ -546,3 +546,17 @@ ________________________________________________________________________________
 Começando a criar as FK pelo MySQL Workbench.
 Aprendendo como ligá-las e configurá-las atravé das abas Relationship e Forein Key.
 PRetendo terminar essa task do scrum amanhã sem falta, pois, tem bastante FK para fazer.
+
+____________________________________________________________________________________________________________________
+
+Configuração inicial do MySQL e criação da base do projeto
+
+Conteúdo:
+
+Hoje foi realizada a configuração completa do ambiente MySQL necessário para o backend do projeto de automação de leads. Primeiro, foi instalado e configurado o MySQL Server 8.0 e o Workbench, ajustando corretamente os módulos "Type and Networking", "Authentication Method", "Accounts and Roles", "Windows Service" e "Apply Configuration". Depois da instalação, foi testada a conexão local com o servidor e validado que o Workbench estava comunicando corretamente com o MySQL.
+
+Em seguida, foi criado o schema principal do projeto, denominado automacao_leads, utilizando o SQL Editor. Após a criação do schema, foi executado o script responsável por estruturar todas as tabelas do banco, incluindo usuários, clientes, leads, buscas, integrações, sessões de login, logs de busca, configurações, tags e tabelas intermediárias de relacionamento. Na execução surgiram alguns warnings normais (tabelas já existentes e avisos de depreciação), mas nada que afetasse o funcionamento. A única mensagem real de erro foi uma chave estrangeira duplicada, causada pela reexecução do script, e que não comprometeu a estrutura final.
+
+Por fim, foi confirmado que o banco de dados está funcionando corretamente, com todas as tabelas criadas — totalizando 11 tabelas — e pronto para receber dados de teste e evoluir para as próximas etapas de desenvolvimento.
+
+Esse avanço marca a conclusão da base de dados do projeto, permitindo seguir para a inserção de registros de teste, criação dos primeiros SELECTs e validação dos relacionamentos.

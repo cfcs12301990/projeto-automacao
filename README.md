@@ -560,3 +560,28 @@ Em seguida, foi criado o schema principal do projeto, denominado automacao_leads
 Por fim, foi confirmado que o banco de dados está funcionando corretamente, com todas as tabelas criadas — totalizando 11 tabelas — e pronto para receber dados de teste e evoluir para as próximas etapas de desenvolvimento.
 
 Esse avanço marca a conclusão da base de dados do projeto, permitindo seguir para a inserção de registros de teste, criação dos primeiros SELECTs e validação dos relacionamentos.
+
+______________________________________________________________________________________________________________________________________________
+
+04-12
+
+Revisão das Tabelas, FKs e Validação da Estrutura do Banco
+
+Hoje foi iniciada uma revisão criteriosa do schema automacao_leads, garantindo que toda a modelagem estivesse coerente, íntegra e livre de inconsistências que poderiam gerar futuros bugs.
+
+Primeiro, foram executados os comandos para verificar a criação de cada tabela via SHOW CREATE TABLE. Também foi revisado o comportamento do MySQL com \G e ;, entendendo que ambos funcionam, mas \G apenas altera o formato visual da saída.
+
+Em seguida, foram analisadas todas as chaves estrangeiras do banco. A consulta retornou exatamente 13 FKs, todas corretamente associadas aos relacionamentos previstos no modelo lógico original. Cada uma foi verificada individualmente e todas apareceram com o status OK.
+
+Também foi feita a verificação dos tipos e compatibilidade entre colunas relacionadas (ex.: INT → INT, mesmo tamanho, mesma assinatura). O resultado final foi:
+
+Tipos OK — Nenhuma inconsistência encontrada entre colunas pai/filho.
+
+Nenhuma duplicata — As tabelas não possuem chaves estrangeiras duplicadas nem relacionamentos redundantes.
+
+Nenhuma FK faltando — Todas as FKs esperadas estão presentes.
+
+A análise completa garante que o banco está em um estado estável, íntegro e pronto para as próximas etapas do projeto, sem risco de herdar problemas estruturais.
+
+Hoje também foi reforçada a prática de desenvolvimento profissional:
+testar, validar, confirmar e só então avançar, mantendo o banco e o código sempre sincronizados.

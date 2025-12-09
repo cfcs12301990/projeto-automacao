@@ -585,3 +585,13 @@ A análise completa garante que o banco está em um estado estável, íntegro e 
 
 Hoje também foi reforçada a prática de desenvolvimento profissional:
 testar, validar, confirmar e só então avançar, mantendo o banco e o código sempre sincronizados.
+
+____________________________________________________________________________________________________________________________________________
+
+9-12
+
+O projeto avançou na estruturação completa do banco de dados, criação das tabelas principais e implementação das relações necessárias para o sistema de automação de leads. As tabelas usuarios, leads, buscas e leads_busca foram criadas com chaves primárias e estrangeiras corretamente definidas, seguindo boas práticas de modelagem relacional. Também foi criada a tabela log_erro para registrar mensagens de erro geradas pela aplicação ou pelo processo automatizado.
+
+Na etapa de testes, foram realizados inserts manuais para garantir que todas as relações estavam funcionando. Inicialmente surgiram erros relacionados a nomes de colunas e à ausência de valores obrigatórios (NOT NULL), mas todos foram corrigidos com ajustes na modelagem e inclusão dos campos corretos nos inserts. Testamos com sucesso a inserção no relacionamento N:N entre leads e buscas, comprovado pela mensagem “1 row(s) affected”, que confirmou a operação.
+
+Com isso, toda a estrutura básica do banco que sustentará o sistema está consolidada e testada, permitindo avançar para a Parte 5, onde iniciaremos a lógica de automação e integração com as ferramentas externas.

@@ -595,3 +595,91 @@ O projeto avançou na estruturação completa do banco de dados, criação das t
 Na etapa de testes, foram realizados inserts manuais para garantir que todas as relações estavam funcionando. Inicialmente surgiram erros relacionados a nomes de colunas e à ausência de valores obrigatórios (NOT NULL), mas todos foram corrigidos com ajustes na modelagem e inclusão dos campos corretos nos inserts. Testamos com sucesso a inserção no relacionamento N:N entre leads e buscas, comprovado pela mensagem “1 row(s) affected”, que confirmou a operação.
 
 Com isso, toda a estrutura básica do banco que sustentará o sistema está consolidada e testada, permitindo avançar para a Parte 5, onde iniciaremos a lógica de automação e integração com as ferramentas externas.
+
+______________________________________________________________________________________________________________________________________________
+11-12-25
+
+
+Configuração e validação completa do ambiente Python
+
+Hoje finalizei toda a preparação do ambiente de desenvolvimento do projeto Automação de Leads. As etapas concluídas foram:
+
+1. Verificação da instalação do Python
+
+Confirmei que o Python 3.12.8 estava instalado e acessível via terminal.
+
+Confirmei o pip e o path via:
+
+python --version
+
+pip --version
+
+Get-Command python
+
+Tudo operacional.
+
+2. Criação do ambiente virtual (venv)
+
+Criei o diretório do projeto.
+
+Ativei o ambiente virtual com:
+
+python -m venv venv
+
+.\venv\Scripts\activate
+
+O prefixo (venv) apareceu corretamente no terminal, confirmando ativação.
+
+3. Instalação das bibliotecas essenciais
+
+Instalei e validei os seguintes pacotes:
+
+pandas → manipulação de planilhas (CSV/Excel)
+
+openpyxl → leitura/escrita de arquivos Excel
+
+requests → comunicação com APIs externas
+
+python-dotenv → leitura de variáveis de ambiente (.env)
+
+106 dependências foram instaladas automaticamente — isso é normal e desejado, pois são libs internas usadas por esses pacotes.
+
+4. Teste 1 — Execução básica do Python
+
+Criei e rodei o arquivo src/main.py para validar o ambiente.
+
+Resultado:
+Ambiente Python OK. venv ativo e funcional!
+
+5. Teste 2 — Validação da biblioteca requests
+
+Criei teste2_requests.py e testei a comunicação HTTP simulada.
+
+Resultado: sucesso.
+
+6. Teste 3 — Teste de importação geral
+
+Criei teste3_imports.py para garantir que todas as bibliotecas essenciais funcionam.
+
+Resultado:
+Todas as bibliotecas foram importadas com sucesso!
+
+7. Teste 4 — Configuração e validação do arquivo .env
+
+Criei o arquivo .env contendo:
+
+MYSQL_HOST=localhost
+MYSQL_USER=root
+MYSQL_PASSWORD=senha123
+MYSQL_DATABASE=automacao_leads
+
+
+E testei com teste4_env.py.
+
+Resultado:
+Todas as variáveis foram lidas corretamente pelo Python.
+
+✔️ Finalização do dia
+
+O ambiente Python do projeto está completamente configurado, testado e funcional.
+Agora estamos prontos para iniciar a integração com o MySQL (Teste 5 em diante).

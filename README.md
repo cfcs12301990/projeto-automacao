@@ -683,3 +683,78 @@ Todas as variáveis foram lidas corretamente pelo Python.
 
 O ambiente Python do projeto está completamente configurado, testado e funcional.
 Agora estamos prontos para iniciar a integração com o MySQL (Teste 5 em diante).
+
+
+__________________________________________________________________________________________________________________________________________
+
+15-12-25
+
+Etapa: Integração Python + MySQL (Fundação do MVP)
+
+Nesta etapa do projeto foi iniciada a preparação do ambiente Python para integração com o banco de dados MySQL, com foco em aprendizado, estabilidade e boas práticas desde o início.
+
+Foram realizados os seguintes passos e testes:
+
+Verificação da instalação correta do Python (3.12) e do pip, garantindo que o interpretador estivesse acessível via terminal.
+
+Criação e ativação de um ambiente virtual (venv) para isolar dependências do projeto.
+
+Instalação das bibliotecas necessárias para o MVP:
+
+requests (consumo de APIs)
+
+pandas e openpyxl (manipulação e exportação de dados)
+
+mysql-connector-python (integração com MySQL)
+
+python-dotenv (leitura segura de variáveis de ambiente)
+
+🐞 Bugs encontrados e aprendizados
+
+Durante os testes iniciais de conexão com o MySQL, foram identificados e analisados diversos problemas comuns em ambientes Windows:
+
+Erro de conexão via Named Pipe (2017 HY000)
+
+O Python tentou se conectar ao MySQL usando Named Pipe por padrão.
+
+Correção: forçar conexão via TCP/IP utilizando host=127.0.0.1 e port=3306.
+
+Erro de acesso negado (1045 – user 'ODBC')
+
+O conector estava utilizando variáveis de ambiente do próprio Windows (USER, PASSWORD).
+
+Correção: adoção de variáveis com prefixo DB_ no arquivo .env.
+
+Arquivo .env não sendo carregado
+
+O load_dotenv() não encontrou automaticamente o arquivo .env devido à estrutura do projeto (src/).
+
+Correção: carregamento explícito do caminho do .env usando Path(__file__).
+
+Execução sem saída no terminal
+
+Scripts rodavam sem retorno por falta de print() ou arquivo não salvo corretamente.
+
+Correção: criação de scripts de debug para validar execução e leitura de variáveis.
+
+Esses problemas foram tratados como parte do processo de aprendizado, garantindo uma base sólida para evitar falhas futuras em produção.
+
+Status atual
+
+Ambiente Python funcional
+
+Ambiente virtual ativo
+
+Bibliotecas essenciais instaladas
+
+MySQL Server validado e operacional
+
+Debug em andamento para validação final da leitura do .env e conexão com o banco
+
+Próximo passo:
+➡ Finalizar teste de conexão MySQL via Python
+➡ Executar SELECT real nas tabelas
+➡ Iniciar o fluxo básico da automação (MVP)
+
+E descobri que não tinha salvado o .env no VS Code, depois apareceu outro erro que estou estudando o que pode ser.
+

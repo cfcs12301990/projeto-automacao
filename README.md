@@ -758,3 +758,142 @@ Próximo passo:
 
 E descobri que não tinha salvado o .env no VS Code, depois apareceu outro erro que estou estudando o que pode ser.
 
+______________________________________________________________________________________________________________________________________
+16-12-25
+
+Bloco C — Integração Python ↔ MySQL (C2 até C3)
+🔹 Contexto
+
+Nesta etapa do projeto, iniciei a integração real entre o Python e o MySQL, utilizando um banco funcional já validado anteriormente (EER, FKs, ENUMs e integridade). O objetivo foi garantir que o software consiga ler e escrever dados no banco com segurança, respeitando regras de negócio e integridade.
+
+✅ TESTE C2 — SELECT simples via Python
+🎯 Objetivo
+
+Validar se:
+
+o Python consegue se conectar ao MySQL
+
+a query SQL é executada corretamente
+
+o retorno do banco é interpretado pelo Python
+
+🧪 Query testada
+SELECT COUNT(*) FROM usuarios;
+
+📄 Script Python
+
+Arquivo: teste_c2_conexao.py
+
+Uso de:
+
+mysql-connector-python
+
+variáveis carregadas do .env
+
+cursor + fetchone()
+
+📤 Resultado
+Total de usuários cadastrados: 3
+
+📌 Conclusão
+
+✔ Conexão estabelecida com sucesso
+✔ Banco correto sendo utilizado
+✔ SELECT funcional
+✔ Cadeia Python → MySQL → Python validada
+
+Esse teste confirmou que o ambiente está pronto para operações reais de leitura.
+
+✅ TESTE C3 — INSERT controlado via Python (com prevenção de duplicidade)
+🎯 Objetivo
+
+Garantir que:
+
+o sistema não insira usuários duplicados
+
+a regra de unicidade do email seja respeitada
+
+erros de banco sejam tratados corretamente
+
+🧠 Regra aplicada
+
+Antes de inserir:
+
+SELECT id FROM usuarios WHERE email = %s;
+
+
+Se existir → cancelar INSERT
+
+Se não existir → realizar INSERT
+
+🧪 Script
+
+Arquivo: teste_c3_conexao.py
+
+Uso de:
+
+placeholders %s
+
+commit() explícito
+
+tratamento de erro com try/except
+
+fechamento correto de conexão
+
+🧨 Problema encontrado (esperado)
+
+Erro:
+
+1205 (HY000): Lock wait timeout exceeded
+
+📌 Diagnóstico
+
+Lock causado por sessões abertas no MySQL Workbench / testes anteriores
+
+Comportamento normal do InnoDB em ambiente de testes intensivos
+
+🛠️ Solução aplicada
+
+Reinício do MySQL Server
+
+Boas práticas reforçadas:
+
+fechar conexões
+
+commits explícitos
+
+evitar sessões penduradas
+
+📤 Resultado final
+Usuário inserido com sucesso!
+
+📌 Conclusão
+
+✔ INSERT via Python funcionando
+✔ Regras de negócio aplicadas
+✔ Tratamento de erro validado
+✔ Primeiro cenário real de lock compreendido
+
+Este teste valida que o sistema escreve dados de forma segura, sem quebrar integridade.
+
+🧠 Aprendizados importantes desta etapa
+
+%s é placeholder do Python, não do MySQL puro
+
+Erros de duplicidade (1062) são proteção, não bug
+
+Locks fazem parte de sistemas reais
+
+Reiniciar o MySQL é aceitável em testes, não em produção
+
+Código bem escrito evita locks futuros
+
+🏁 Status do Bloco C
+
+✅ Ambiente Python funcional
+✅ .env carregando corretamente
+✅ MySQL conectado
+✅ SELECT validado
+✅ INSERT validado
+✅ Tratamento de erro aplicado
+✅ Base pronta para automações reais

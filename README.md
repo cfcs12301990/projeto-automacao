@@ -897,3 +897,45 @@ Código bem escrito evita locks futuros
 ✅ INSERT validado
 ✅ Tratamento de erro aplicado
 ✅ Base pronta para automações reais
+
+_____________________________________________________________________________________________________________________________
+
+17-12-25
+
+### TESTE C4 — Validação completa do fluxo de execução da tabela `buscas`
+
+Neste teste foi validado, exclusivamente via SQL (MySQL Workbench), o fluxo completo de uma busca, simulando exatamente o comportamento esperado da automação antes de qualquer integração com Python ou API.
+
+#### Objetivo
+Garantir que a tabela `buscas`:
+- suporte corretamente o ciclo de vida de uma automação
+- respeite os ENUMs definidos
+- registre timestamps de forma automática e consistente
+- impeça estados inválidos por contrato de banco
+
+#### Fluxo validado
+1. **Criação da busca**
+   - Inserção de um registro com `status = 'pendente'`
+   - Verificação dos campos automáticos `criado_em` e `atualizado_em`
+
+2. **Execução da busca**
+   - Atualização controlada do status de `pendente` para `executando`
+   - Confirmação da atualização do campo `atualizado_em`
+
+3. **Finalização da busca**
+   - Atualização do status para `finalizado`
+   - Preenchimento dos campos:
+     - `quantidade_leads`
+     - `origem`
+     - `mensagem_erro` (NULL em caso de sucesso)
+     - `finalizado_em`
+
+#### Aprendizados e validações importantes
+- O erro `Data truncated for column 'status'` confirmou que o ENUM da coluna `status` está funcionando corretamente e bloqueia valores inválidos.
+- O banco de dados atua como contrato de negócio, impedindo inconsistências de estado.
+- O fluxo real de automação é obrigatoriamente sequencial:
+  `pendente → executando → finalizado / erro`
+- A estrutura atual da tabela `buscas` está pronta para ser consumida por scripts Python sem risco de estados inválidos.
+
+#### Conclusão
+O fluxo SQL do TESTE C4 foi executado com sucesso, sem erros, confirmando que a base está sólida para a próxima etapa: replicar esse mesmo fluxo no Python (TESTE C4.1).

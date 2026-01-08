@@ -939,3 +939,98 @@ Garantir que a tabela `buscas`:
 
 #### Conclusão
 O fluxo SQL do TESTE C4 foi executado com sucesso, sem erros, confirmando que a base está sólida para a próxima etapa: replicar esse mesmo fluxo no Python (TESTE C4.1).
+
+
+______________________________________________________________________________________________________________________
+
+07-01-26
+
+01/01/2026 — Testes C4.1 e C4.2 (Fluxo de Buscas)
+Contexto
+
+Retomada do projeto após período de pausa. O foco do dia foi validar, de forma controlada, o fluxo de execução de buscas no banco de dados, simulando tanto cenários de sucesso quanto de erro, antes de integrar qualquer API externa.
+
+# TESTE C4.1 — Fluxo de execução com sucesso (SQL + Python)
+
+Objetivo:
+Validar o ciclo completo de uma busca:
+
+Buscar uma entrada com status pendente
+
+Atualizar para executando
+
+Simular processamento
+
+Finalizar como finalizado
+
+Encerrar conexão corretamente
+
+Resultado:
+
+Conexão com MySQL bem-sucedida
+
+Nenhuma exceção gerada
+
+Controle correto de status no banco
+
+Script encerra sem vazamentos de cursor ou conexão
+
+Conclusão:
+O fluxo básico de processamento de buscas está funcional, previsível e seguro, servindo como base para workers reais no futuro.
+
+# TESTE C4.2 — Fluxo com erro controlado (simulação realista)
+
+Objetivo:
+Simular um erro durante a execução de uma busca e validar se o sistema:
+
+Captura a exceção
+
+Atualiza corretamente o status para erro
+
+Registra a mensagem do erro no banco
+
+Encerra conexão sem falhas
+
+Erro Simulado:
+
+Erro simulado para teste C4.2
+
+
+Resultado no terminal:
+
+Conectado ao MySQL com sucesso.
+Busca 6 marcada como EXECUTANDO.
+Executando busca...
+Erro capturado: Erro simulado para teste C4.2
+Busca 6 marcada como ERRO.
+Conexão encerrada.
+
+
+Resultado no banco:
+
+status atualizado para erro
+
+mensagem_erro gravada corretamente
+
+finalizado_em preenchido
+
+Nenhum cursor ou conexão reutilizada incorretamente
+
+# Lições Técnicas Consolidadas
+
+Cada script deve controlar seu próprio ciclo de vida
+
+Nunca reutilizar cursor/conexão após fechamento
+
+try / except / finally não é opcional — é arquitetura
+
+Estados (pendente → executando → finalizado/erro) são o coração do sistema
+
+Erro tratado ≠ bug
+
+ Estado atual do projeto
+
+ Fluxo de buscas validado - OK
+ Tratamento de erro robusto - OK
+ Base pronta para integração com API - OK
+ Código preparado para escalar - OK
